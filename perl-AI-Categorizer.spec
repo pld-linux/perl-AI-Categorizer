@@ -7,7 +7,7 @@
 %define	pnam	Categorizer
 Summary:	AI::Categorizer - automatic text categorization
 Summary(pl):	AI::Categorizer - automatyczna klasyfikacja tekstu
-Name:		perl-%{pdir}-%{pnam}
+Name:		perl-AI-Categorizer
 Version:	0.07
 Release:	1
 # same as perl
