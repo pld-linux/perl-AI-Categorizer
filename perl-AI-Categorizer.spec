@@ -5,7 +5,7 @@ Summary:	AI::Categorize -- Automatic Text Categorization
 Summary(pl):	AI::Categorize -- Automatyczna klasyfikacja tekstu
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.03
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -25,8 +25,14 @@ categorization algorithm to use, what features (words or otherwise) of the
 documents should be used (or how to automatically choose these features),
 what format the documents are in, and so on.
 
-# %description -l pl
-# TODO
+%description -l pl
+AI::Categorizer to szkielet do automatycznej klasyfikacji tekstu.
+Sk³ada siê z zestawu modu³ów Perla z implementacj± wspólnych zadañ
+klasyfikuj±cych oraz zbioru zdefiniowanych relacji miêdzy tymi
+modu³ami. Ró¿ne szczegó³y s± elastyczne - na przyk³ad mo¿na wybraæ,
+jaki algorytm klasyfikacji ma byæ u¿yty, które w³asno¶ci (s³owa czy
+inne) dokumentów powinny byæ wykorzystane (lub jak automatycznie
+wybraæ te cechy), w jakim formacie s± dokumenty itd.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
