@@ -5,7 +5,7 @@ Summary:	AI::Categorize -- Automatic Text Categorization
 Summary(pl):	AI::Categorize -- Automatyczna klasyfikacja tekstu
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.04
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -38,8 +38,10 @@ wybraæ te cechy), w jakim formacie s± dokumenty itd.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor
 %{__make}
+
 #%%{!?_without_tests:%{__make} test}
 
 %install
@@ -52,6 +54,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{perl_sitelib}/%{pdir}/*.pm
-%{perl_sitelib}/%{pdir}/%{pnam}
+%{perl_vendorlib}/%{pdir}/*.pm
+%{perl_vendorlib}/%{pdir}/%{pnam}
 %{_mandir}/man3/*
