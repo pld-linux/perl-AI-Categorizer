@@ -38,7 +38,7 @@ wybraæ te cechy), w jakim formacie s± dokumenty itd.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} -MExtUtils::MakeMaker -e 'WriteMakefile(NAME=>"AI::Categorize")' \
+%{__perl} -MExtUtils::MakeMaker -e 'WriteMakefile(NAME=>"AI::Categorizer")' \
 	INSTALLDIRS=vendor
 %{__make}
 
