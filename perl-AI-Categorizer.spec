@@ -5,11 +5,11 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	AI
 %define	pnam	Categorizer
-Summary:	AI::Categorize - automatic text categorization
-Summary(pl):	AI::Categorize - automatyczna klasyfikacja tekstu
+Summary:	AI::Categorizer - automatic text categorization
+Summary(pl):	AI::Categorizer - automatyczna klasyfikacja tekstu
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.05
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
