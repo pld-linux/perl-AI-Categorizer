@@ -6,7 +6,7 @@
 %define	pdir	AI
 %define	pnam	Categorizer
 Summary:	AI::Categorize - automatic text categorization
-Summary(pl):	AI::Categorize - Automatyczna klasyfikacja tekstu
+Summary(pl):	AI::Categorize - automatyczna klasyfikacja tekstu
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.04
 Release:	2
