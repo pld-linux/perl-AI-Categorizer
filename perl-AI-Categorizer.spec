@@ -1,18 +1,23 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	AI
 %define	pnam	Categorizer
-Summary:	AI::Categorize -- Automatic Text Categorization
-Summary(pl):	AI::Categorize -- Automatyczna klasyfikacja tekstu
+Summary:	AI::Categorize - automatic text categorization
+Summary(pl):	AI::Categorize - automatyczna klasyfikacja tekstu
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.04
-Release:	2
+Release:	3
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 BuildRequires:	rpm-perlprov >= 3.0.3-26
-#%%{!?_without_tests:BuildRequires perl-Statistics-Contingency}
-#%%{!?_without_tests:BuildRequires perl-Lingua-Stem}
+%{!?_without_tests:BuildRequires:	perl-AI-DecisionTree}
+%{!?_without_tests:BuildRequires:	perl-Statistics-Contingency}
+#%%{!?_without_tests:BuildRequires:	perl-Lingua-Stem}
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -42,7 +47,7 @@ wybraæ te cechy), w jakim formacie s± dokumenty itd.
 	INSTALLDIRS=vendor
 %{__make}
 
-#%%{!?_without_tests:%{__make} test}
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
