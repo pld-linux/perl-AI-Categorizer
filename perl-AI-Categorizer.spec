@@ -8,16 +8,19 @@
 Summary:	AI::Categorize - automatic text categorization
 Summary(pl):	AI::Categorize - automatyczna klasyfikacja tekstu
 Name:		perl-%{pdir}-%{pnam}
-Version:	0.04
-Release:	3
+Version:	0.05
+Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 BuildRequires:	rpm-perlprov >= 4.0.2-104
-%{!?_without_tests:BuildRequires:	perl-AI-DecisionTree}
-%{!?_without_tests:BuildRequires:	perl-Statistics-Contingency}
-#%%{!?_without_tests:BuildRequires:	perl-Lingua-Stem}
+%if 0%{!?_without_tests:1}
+BuildRequires:	perl-AI-DecisionTree
+BuildRequires:	perl-Algorithm-NaiveBayes
+BuildRequires:	perl-Statistics-Contingency
+#BuildRequires:	perl-Lingua-Stem
+%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -43,8 +46,10 @@ wybraæ te cechy), w jakim formacie s± dokumenty itd.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
+rm -f Build.PL
 %{__perl} -MExtUtils::MakeMaker -e 'WriteMakefile(NAME=>"AI::Categorizer")'
 %{__make}
+
 %{!?_without_tests:%{__make} test}
 
 %install
