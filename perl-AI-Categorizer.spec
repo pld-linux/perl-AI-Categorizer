@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without	tests	# don't perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	AI
@@ -16,7 +16,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 # Source0-md5:	ae1c1320c802337c7b1c2500476ffa9f
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 3.0.3-26
-%if 0%{!?_without_tests:1}
+%if %{with tests}
 BuildRequires:	perl-AI-DecisionTree
 BuildRequires:	perl-Algorithm-NaiveBayes
 BuildRequires:	perl-Class-Container >= 0.09
@@ -52,12 +52,13 @@ wybraæ te cechy), w jakim formacie s± dokumenty itd.
 	INSTALLDIRS=vendor
 %{__make}
 
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
