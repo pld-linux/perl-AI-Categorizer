@@ -8,16 +8,20 @@
 Summary:	AI::Categorizer - automatic text categorization
 Summary(pl):	AI::Categorizer - automatyczna klasyfikacja tekstu
 Name:		perl-%{pdir}-%{pnam}
-Version:	0.04
-Release:	3
+Version:	0.05
+Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 3.0.3-26
-%{!?_without_tests:BuildRequires:	perl-AI-DecisionTree}
-%{!?_without_tests:BuildRequires:	perl-Statistics-Contingency}
-#%%{!?_without_tests:BuildRequires:	perl-Lingua-Stem}
+%if %{!?_without_tests:1}0
+BuildRequires:	perl-AI-DecisionTree
+BuildRequires:	perl-Algorithm-NaiveBayes
+BuildRequires:	perl-Class-Container >= 0.09
+BuildRequires:	perl-Lingua-Stem >= 0.50
+BuildRequires:	perl-Statistics-Contingency >= 0.06
+%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -43,7 +47,7 @@ wybraæ te cechy), w jakim formacie s± dokumenty itd.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} -MExtUtils::MakeMaker -e 'WriteMakefile(NAME=>"AI::Categorizer")' \
+%{__perl} -MExtUtils::MakeMaker -e 'WriteMakefile(NAME=>"AI::Categorizer", PL_FILES=>{})' \
 	INSTALLDIRS=vendor
 %{__make}
 
