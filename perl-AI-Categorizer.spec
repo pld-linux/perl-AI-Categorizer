@@ -46,8 +46,7 @@ wybraæ te cechy), w jakim formacie s± dokumenty itd.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-rm -f Build.PL
-%{__perl} -MExtUtils::MakeMaker -e 'WriteMakefile(NAME=>"AI::Categorizer")'
+%{__perl} -MExtUtils::MakeMaker -e 'WriteMakefile(NAME=>"AI::Categorizer", PL_FILES=>{})'
 %{__make}
 
 %{!?_without_tests:%{__make} test}
