@@ -10,7 +10,8 @@ Summary(pl):	AI::Categorizer - automatyczna klasyfikacja tekstu
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.07
 Release:	1
-License:	GPL/Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	ae1c1320c802337c7b1c2500476ffa9f
