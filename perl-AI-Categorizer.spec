@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	AI
-%define	pnam	Categorizer
+%define		pdir	AI
+%define		pnam	Categorizer
 Summary:	AI::Categorizer - automatic text categorization
 Summary(pl):	AI::Categorizer - automatyczna klasyfikacja tekstu
 Name:		perl-AI-Categorizer
