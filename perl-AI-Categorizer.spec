@@ -4,8 +4,8 @@
 Summary:	AI::Categorize -- Automatic Text Categorization
 Summary(pl):	AI::Categorize -- Automatyczna klasyfikacja tekstu
 Name:		perl-%{pdir}-%{pnam}
-Version:	0.03
-Release:	2
+Version:	0.04
+Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
