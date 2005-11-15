@@ -31,10 +31,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 "AI::Categorizer" is a framework for automatic text categorization. It
 consists of a collection of Perl modules that implement common
 categorization tasks, and a set of defined relationships among those
-modules. The various details are flexible - for example, you can choose what
-categorization algorithm to use, what features (words or otherwise) of the
-documents should be used (or how to automatically choose these features),
-what format the documents are in, and so on.
+modules. The various details are flexible - for example, you can
+choose what categorization algorithm to use, what features (words or
+otherwise) of the documents should be used (or how to automatically
+choose these features), what format the documents are in, and so on.
 
 %description -l pl
 AI::Categorizer to szkielet do automatycznej klasyfikacji tekstu.
