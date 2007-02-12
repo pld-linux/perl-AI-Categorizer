@@ -6,7 +6,7 @@
 %define		pdir	AI
 %define		pnam	Categorizer
 Summary:	AI::Categorizer - automatic text categorization
-Summary(pl):	AI::Categorizer - automatyczna klasyfikacja tekstu
+Summary(pl.UTF-8):   AI::Categorizer - automatyczna klasyfikacja tekstu
 Name:		perl-AI-Categorizer
 Version:	0.07
 Release:	1
@@ -36,14 +36,14 @@ choose what categorization algorithm to use, what features (words or
 otherwise) of the documents should be used (or how to automatically
 choose these features), what format the documents are in, and so on.
 
-%description -l pl
+%description -l pl.UTF-8
 AI::Categorizer to szkielet do automatycznej klasyfikacji tekstu.
-Sk³ada siê z zestawu modu³ów Perla z implementacj± wspólnych zadañ
-klasyfikuj±cych oraz zbioru zdefiniowanych relacji miêdzy tymi
-modu³ami. Ró¿ne szczegó³y s± elastyczne - na przyk³ad mo¿na wybraæ,
-jaki algorytm klasyfikacji ma byæ u¿yty, które w³asno¶ci (s³owa czy
-inne) dokumentów powinny byæ wykorzystane (lub jak automatycznie
-wybraæ te cechy), w jakim formacie s± dokumenty itd.
+SkÅ‚ada siÄ™ z zestawu moduÅ‚Ã³w Perla z implementacjÄ… wspÃ³lnych zadaÅ„
+klasyfikujÄ…cych oraz zbioru zdefiniowanych relacji miÄ™dzy tymi
+moduÅ‚ami. RÃ³Å¼ne szczegÃ³Å‚y sÄ… elastyczne - na przykÅ‚ad moÅ¼na wybraÄ‡,
+jaki algorytm klasyfikacji ma byÄ‡ uÅ¼yty, ktÃ³re wÅ‚asnoÅ›ci (sÅ‚owa czy
+inne) dokumentÃ³w powinny byÄ‡ wykorzystane (lub jak automatycznie
+wybraÄ‡ te cechy), w jakim formacie sÄ… dokumenty itd.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
