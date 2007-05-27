@@ -8,13 +8,13 @@
 Summary:	AI::Categorizer - automatic text categorization
 Summary(pl.UTF-8):	AI::Categorizer - automatyczna klasyfikacja tekstu
 Name:		perl-AI-Categorizer
-Version:	0.07
-Release:	1
+Version:	0.09
+Release:	0.1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	ae1c1320c802337c7b1c2500476ffa9f
+# Source0-md5:	a35d5af19ae0d9ddd0a800b7172a0750
 URL:		http://search.cpan.org/dist/AI-Categorizer/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 3.0.3-26
