@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	AI
 %define		pnam	Categorizer
 Summary:	AI::Categorizer - automatic text categorization
